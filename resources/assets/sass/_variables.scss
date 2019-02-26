@@ -1,0 +1,56 @@
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+@font-face {
+    font-family: Ebrima;
+    src: url('/fonts/ebrima.ttf');
+}
+
+@font-face {
+    font-family: Lora;
+    src: url('/fonts/Lora-Regular.ttf');
+}
+
+@font-face{
+     font-family:  Courier ;
+     src: url('/fonts/Gabriola.ttf');
+}
+
+@mixin flexPos($x,$y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+$parag : Lora;
+$heading : Ebrima;
+$color : #eaac89 #33454f;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$main :#32004b;
+.full-page{
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    .menu{
+        width: 100px;
+        height: 100%;
+        background: #111; 
+    }
+}

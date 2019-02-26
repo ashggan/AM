@@ -1,0 +1,91 @@
+$h: 500px;
+$time: 1s;
+$color : #eaac89 #33454f;
+#intro{
+    margin-top: 20px;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    perspective: 40em; // adding the z plane
+    top: 0;
+    left: 0;  
+    width: 100%;
+    color: #000;
+    transform-style: preserve-3d; 
+    font-family: $parag;
+    .wrapper{
+      // height: 100%;
+      .txt{
+      height: 100%;
+
+        .disc{
+          font-size: 14px;
+        }
+        .subt{
+          font-size: 30px;
+          color: nth($color, 2 );
+        }
+        .title{
+          font-size: 60px;
+          color: nth($color, 1);
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        // height: 100%;
+        // display: flex;
+        // justify-content: center;
+      }
+      .bg{
+        // background: #111;
+        // transform: rotateZ(-30deg);
+        height: 700px ;
+        width: 100%;
+        padding-top: 20px;
+        justify-content: center;
+        align-content: center; 
+        .line{
+          .box{      
+            // border: 1px solid rgba(85, 28, 160, 0.445);
+            position: absolute;
+            top: 50%;
+            left: 50%; 
+            animation: move 3s ease-in-out infinite ;
+            @for $i from 1 to 8 {
+              &:nth-child(#{$i}){
+                 
+                animation-delay: -$i*$time/8;
+                align-self: center;
+                height: $h - 60*$i ;
+                width:  $h - 60*$i;
+                margin: (30*$i - .5*$h) ;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                background: 
+                //linear-gradient(111.15603233821378deg, rgba(114, 55, 146,1) 5.911420204978038%,rgba(239, 173, 183,1) 95.95534407027817%);
+                //linear-gradient(111.15603233821378deg, rgba(230, 170, 227,1) 5.911420204978038%,rgba(239, 175, 164,1) 95.95534407027817%);
+                linear-gradient(111.15603233821378deg, rgb(234, 172, 137) 5.911420204978038%,#33454f 95.95534407027817%);
+                //linear-gradient(111.15603233821378deg, rgba(245, 196, 207,1) 5.911420204978038%,rgba(66, 82, 183,1) 95.95534407027817%);
+                opacity:  .15*$i;
+                border-radius: 40%;
+                // transition: .5s transform .5s ;    
+                // transition-delay: 1s; 
+                &:hover{
+                 // background: linear-gradient(111.15603233821378deg, rgba(186, 213, 241,1) 5.911420204978038%,rgba(42, 39, 107,1) 95.95534407027817%);
+                 opacity: 1;
+                 cursor: pointer;
+                // animation: move 6s ease-in-out 1 ; 
+                  // transform: rotateZ(70deg);
+                }
+              }
+            }
+                      
+          }
+        }
+        
+      }    
+    }
+}
+
+@keyframes move{
+  70%, 100% { transform: rotateZ(1turn)   ; }
+}
+ 

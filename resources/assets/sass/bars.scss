@@ -1,0 +1,83 @@
+// bars style variables
+$prisms :24; // number of prisms
+$height : 6.35em; //prism height
+$base : 1em;  
+$base-c: #69f #7e4b4c;	// prisam base color s      
+$lat-c: #542252 #7e301a;  //prism later colors
+$radius : 1.625*$height; // the overall circle raduis
+$base-angle: 369/$prisms; // the pionts of prims locaions around the circle
+$t: 1.75s; // amination timing
+
+@mixin mix-me($c,$k) { // adding color griednt for the prims according to loction
+    background: mix(nth( $c,1) , nth( $c ,2) , $k);
+  }
+
+@function pow($number, $exponent) {
+    $value: 1;
+    @if $exponent > 0 {
+        @for $i from 1 through $exponent {
+        $value: $value * $number;
+    }
+}
+
+@return $value;
+}
+#bars{
+  height: 100vh;
+  background: #000;
+  perspective: 40em; // adding the z plane
+  *{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-style: preserve-3d; // adding the 3D   
+  }
+  .assembly{
+    transform: rotateX(-30deg); // adding the above view look
+    .positioner{ // posioning the center of the prisms      
+      @for $h from 0 to $prisms {
+        $curr-angle : $h*$base-angle;
+        // $k:  calc(1 + cos($curr-angle))*50%;
+        // @include mix-me($lat-c,$k);
+        // &:nth-child(#{$h + 1}) {
+          
+        &:nth-child(#{$h + 1}){
+          transform: rotateY($h*$base-angle + 90deg) translateZ($radius) rotateX(70deg);
+          .prism {
+              animation-delay: -$h*$t/$prisms;
+              }
+        }
+      }
+      .prism{
+        animation: rot $t ease-in-out infinite;
+        .prism__face{
+          margin : -.5*$height (-.5*$base);
+          width: $base;
+          height: $height;
+          backface-visibility: hidden;
+          background: nth($lat-c,1);
+          @include mix-me($lat-c,50%);
+          &:nth-child(n + 5){
+            // gining the bases different colors
+            margin-top: -.5*$base;
+            height: $base;
+            background: nth($base-c, 1 );
+          }
+          @for $i from 0 to 6 {
+            &:nth-child(#{$i + 1}) {
+              transform: if($i < 4, rotateY($i*90deg), rotateX(pow(-1, $i)*90deg)) translateZ(.5*if($i < 4, $base, $height));
+              animation-delay: -$i*$t/$prisms;            
+            }
+        }
+          &:nth-child(-n + 4):nth-child(even){
+            filter: brightness(.7);
+          }
+        }
+      }
+    }
+  }
+  }
+  
+  @keyframes rot {
+    75%, 100% { transform: rotateX(-.5turn); }
+  }
