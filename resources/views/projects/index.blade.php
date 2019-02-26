@@ -6,7 +6,6 @@
         <div class="col-md-8"><h2>project</h2></div>
         <div class="col-md-4"><a href="{{route('project.create')}} " class="btn btn-dark"> <i class="fa fa-plus falg"></i> </a> </div>
     </div>
-        
     @foreach ($pros as $pro)
         <div class="row">
             <div class="card mt-5" style="width:100%">
