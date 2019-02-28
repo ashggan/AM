@@ -1,28 +1,20 @@
 <?php
 
-Route::get('/about',function(){
-    return view('pages.about');
-});
-
 Route::get('/bars',function(){
     return view('pages.bars');
 });
 
-Route::get('/home',function(){
-    return view('pages.index');
-});
 
-Route::get('/',function(){
-    return view('pages.profile');
-});
+Route::get('/','PagesController@home')->name('home');
+Route::get('/about','PagesController@about')->name('about');
+Route::get('/profile','PagesController@profile')->name('profile');
+Route::get('/portifolio','projectsController@index')->name('portifolio');
+Route::get('/project/{$id}','projectsController@showProject')->name('show.project');
 
 Route::get('/about', function () {
     return view('pages.about');
 });
 
-Route::get('/portifolio', function () {
-    return view('pages.portifolio');
-});
 Route::get('/portifolio/project', function () {
     return view('pages.project');
 });

@@ -13,7 +13,16 @@ class projectsController extends Controller
 
     public function index()
     {
-        return view('projects.index');
+        $pros = Projects::all();
+        foreach ($pros as $pro) {
+            // $pro->wraps = $this->unserializing($pro->wraps);
+            $pro->features = $this->unserializing($pro->features);
+            $pro->screenshots = unserialize($pro->screenshots);
+            $pro->screenshots = Gallery::find($pro->screenshots);
+            // $pro->techs = unserialize($pro->techs);
+            // $pro->techs = Technoliges::find($pro->techs);
+        }
+        return view('pages.portifolio')->with('pros',$pros);   
     }
 
     public function update(Request $request, $id)
