@@ -72,9 +72,7 @@ class projectsController extends Controller
         return  $pro;// listing::collection($pro);
     }
 
-    public function showProject($id)
-    {
-        //
+    public function details($id){
         $pro = Projects::find($id);
         $pro->wraps = $this->unserializing($pro->wraps);
         $pro->features = $this->unserializing($pro->features);

@@ -1,5 +1,7 @@
 <?php
 
+Auth::routes();
+
 Route::get('/bars',function(){
     return view('pages.bars');
 });
@@ -9,14 +11,11 @@ Route::get('/','PagesController@home')->name('home');
 Route::get('/about','PagesController@about')->name('about');
 Route::get('/profile','PagesController@profile')->name('profile');
 Route::get('/portifolio','projectsController@index')->name('portifolio');
-Route::get('/project/{$id}','projectsController@showProject')->name('show.project');
+Route::get('/portifolio/{id}', 'projectsController@details' )->name('details');
 
 Route::get('/about', function () {
     return view('pages.about');
 });
- 
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -30,7 +29,6 @@ Route::prefix('admin')->group(function(){
     Route::get('/edit/{id}','adminPages@edit')->name('project.edit');
 
 });
-
 Route::prefix('techs')->middleware('auth')->group(function(){
     // Route::resource('/','TechnoligyController');
     Route::get('/','TechnoligyController@index') ;
