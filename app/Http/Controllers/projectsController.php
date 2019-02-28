@@ -13,7 +13,7 @@ class projectsController extends Controller
 
     public function index()
     {
-        $pros = Projects::all();
+        $pros = Projects::orderBy('created_at','asc')->paginate(3) ;
         foreach ($pros as $pro) {
             // $pro->wraps = $this->unserializing($pro->wraps);
             $pro->features = $this->unserializing($pro->features);
@@ -72,9 +72,17 @@ class projectsController extends Controller
         return  $pro;// listing::collection($pro);
     }
 
-    public function edit($id)
+    public function showProject($id)
     {
         //
+        $pro = Projects::find($id);
+        $pro->wraps = $this->unserializing($pro->wraps);
+        $pro->features = $this->unserializing($pro->features);
+        $pro->screenshots = unserialize($pro->screenshots);
+        $pro->screenshots = Gallery::find($pro->screenshots);
+        $pro->techs = unserialize($pro->techs);
+        $pro->techs = Technoliges::find($pro->techs);
+        return view('pages.project')->with('pro',$pro);   
     }
 
     public function destroy($id)

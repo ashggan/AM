@@ -10,15 +10,7 @@
 <section id="portfilio">
 <div class="container mt-5">
     <div class="row project justify-content-start align-items-start ">
-        <div class="col-md-2 d-flex justify-content-center align-items-center mt-5"> 
-            <div class="hireme animated 1 fadeInUp delay-2s">
-                <p><a href="#">Hire me</a> </p>
-                <div class="sm"><i class="fa fa-facebook"></i></div>
-                <div class="sm"><i class="fa fa-envelope"></i></div>
-                <div class="sm"><i class="fa fa-github"></i></div>
-                <div class="sm"><i class="fa fa-linkedin"></i></div>
-            </div> 
-        </div>
+        @include('inc.hire')
         <div class="col-md-10">
             <div class="row mb-5">
                 <div class="col-md-10 offset-md-1  animated 1 fadeInDown delay-2s">

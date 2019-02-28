@@ -14633,6 +14633,17 @@ body div {
   border-radius: 3px;
 }
 
+.page-item.active .page-link {
+  background-color: #ff2768;
+  border-color: #ff2768;
+}
+
+.page-link {
+  border-radius: 70%;
+  margin: 10px;
+  color: #ff2768;
+}
+
 .py-4 {
   height: 100vh;
 }

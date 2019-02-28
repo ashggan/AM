@@ -39,7 +39,9 @@
             </div>    
                 
             @endforeach
-            
+            <div class="row mt-5 justify-content-center align-items-center">
+                    {{ $pros->links() }}
+            </div>
             {{-- <div class="row mb-5">
                     <div class="col-md-6 mb-5">
                         <div class="block">

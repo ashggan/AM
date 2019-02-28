@@ -37,6 +37,8 @@
             @foreach ($pro->screenshots as $img)
                 <img src="/gallery/{{$img->name}}" alt="" srcset="" width="70px">
             @endforeach
-        </div>      
+        </div>    
+        
+      
 </div>
 @endsection

@@ -14,10 +14,7 @@ Route::get('/project/{$id}','projectsController@showProject')->name('show.projec
 Route::get('/about', function () {
     return view('pages.about');
 });
-
-Route::get('/portifolio/project', function () {
-    return view('pages.project');
-});
+ 
 
 Auth::routes();
 

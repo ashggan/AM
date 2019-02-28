@@ -13,7 +13,7 @@ class PagesController extends Controller
     }
 
     public function home(){
-        return view('pages.profile');
+        // return view('pages.profile');
     }
 
     public function profile(){
