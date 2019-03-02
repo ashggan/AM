@@ -11,7 +11,7 @@ Route::get('/about','PagesController@about')->name('about');
 Route::get('/profile','PagesController@profile')->name('profile');
 Route::get('/portifolio','projectsController@index')->name('portifolio');
 Route::get('/portifolio/{id}', 'projectsController@details' )->name('details');
-
+ 
 
 Route::prefix('contact')->group(function() {
     Route::get('/','PagesController@contact')->name('contact');
@@ -19,6 +19,7 @@ Route::prefix('contact')->group(function() {
     Route::get('/all','ContactController@all')->middleware('auth');
     Route::delete('/del/{id}','ContactController@del');
 });
+ 
 
 Route::get('/about', function () {
     return view('pages.about');
