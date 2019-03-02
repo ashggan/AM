@@ -24,7 +24,7 @@
                                 <li> <i class="fa fa-star-o mr-2"></i>{{$item->feat}}</li>
                             @endforeach
                         </ul>
-                        <a href="{{route('show.project',$pro->id)}}" class="btn more"> More details</a>
+                    <a href="{{route('details',$pro->id)}}" class="btn more"> More details</a>
                     </div>
                 </div>
                 <div class="col-md-6  d-flex justify-content-center align-items-start">

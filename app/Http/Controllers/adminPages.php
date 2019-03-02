@@ -9,6 +9,9 @@ use App\Technoliges;
 
 class adminPages extends Controller
 {
+
+
+
     public  function techs(){
         return view('techs.index');
     }

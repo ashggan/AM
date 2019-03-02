@@ -11,13 +11,11 @@
     <a class="menuitem" href="/portifolio">portfolio</a>
     <a class="menuitem" href="/about">about</a>
     <a class="menuitem" href="/contact">contact me</a>
-    <a class="menuitem" href="/hire">hire me</a>
     <div class="call">
-        <button class="btn btn-dark"> Hire Me </button>
-        <button class="btn btn-dark"> My CV </button>
+        <a class="btn btn-dark" href="/cv/Ashgan_Mustafa_Resume.docx" target="_blank" > My CV </a>
     </div>
     <div class="row justify-content-center align-items-center  justify-self-end">
-        <div class="social animated 1 fadeInDown delay-5s">
+        <div class="social animated 1 fadeInDown delay-1s">
             <div class="circle"><a href=""><i class="fa fa-envelope"></i></a></div>  
             <div class="circle"><a href=""><i class="fa fa-linkedin"></i></a></div>  
             <div class="circle"><a href=""><i class="fa fa-github"></i></a></div>  

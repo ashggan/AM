@@ -14644,6 +14644,50 @@ body div {
   color: #ff2768;
 }
 
+.tag {
+  color: #ff2768;
+}
+
+.about {
+  padding-top: 70px;
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.about .btn-light {
+  color: #212529;
+  background-color: #fff;
+  border-color: #ff2768;
+  padding: 10px 30px;
+}
+
+.about .btn-light:focus {
+  background: #ff2768;
+  border-style: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contact .form-group {
+  width: 100%;
+}
+
+.contact .form-group .form-control {
+  border: 1px solid #ff2768;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.contact .form-group .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .py-4 {
   height: 100vh;
 }
@@ -15058,7 +15102,7 @@ body div {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: -90px;
-  padding-top: 20%;
+  padding-top: 15%;
 }
 
 #home .content {
@@ -15070,12 +15114,17 @@ body div {
   font-size: 60px;
   color: #fff;
   font-family: Ebrima;
+  font-weight: 700;
+}
+
+#home .content .call {
+  margin: 30px;
+  color: #ddd;
 }
 
 #home .content .subt {
-  font-size: 30px;
-  color: #fff;
-  text-transform: uppercase;
+  font-size: 18px;
+  color: #ddd;
 }
 
 #home .content .subt span {
@@ -15088,20 +15137,41 @@ body div {
 }
 
 #home .content .btn-dark {
-  color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  color: #ddd;
+  background-color: #343a4000;
+  border-color: #ddd;
+  font-weight: 700;
   padding: 8px 45px;
   margin: 10px 20px;
   text-transform: uppercase;
   font-size: 12px;
-  -webkit-transition: all .7;
-  transition: all .7;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 
 #home .content .btn-dark:hover {
   background: #fff;
-  color: #33454f;
+  color: #ff2768;
+}
+
+#home .circle {
+  border-color: #fff;
+  background: transparent;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+#home .circle i {
+  color: #fff;
+}
+
+#home .circle:hover {
+  background: #ff2768;
+  border-color: #ff2768;
+}
+
+#home .circle:hover i {
+  color: #fff;
 }
 
 #banner {
@@ -15307,7 +15377,7 @@ body div {
   border: 1px solid #ff2768;
   border-radius: 90%;
   margin: 0 10px;
-  background: #ff2768;
+  background: #fff;
   color: #fff;
   cursor: pointer;
   -webkit-transition: all 1s ease-in-out;
@@ -15324,17 +15394,16 @@ body div {
 }
 
 .social .circle i {
-  color: #fff;
+  color: #ff2768;
   font-size: 12px;
 }
 
 .social .circle:hover {
-  background: #fff;
-  border: 1px solid #fff;
+  background: #ff2768;
 }
 
 .social .circle:hover i {
-  color: #ff2768;
+  color: #fff;
 }
 
 .list {

@@ -12,3 +12,11 @@ npm-debug.log
 yarn-error.log
 .env
 .phpunit.result.cache
+/app.zip
+/.env.zip
+/public.zip
+/node_modules.zip
+/vendor.zip
+
+ 
+

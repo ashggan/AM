@@ -88,10 +88,11 @@
             });
         },
         store(){
+            if(!this.tech.name && !this.tech.name.trim()) return;
             axios.post(this.url,this.tech)
             .then(res =>{
-                console.log(res);
                 this.getAll();
+                this.tech.name ='';
             })
         },
         edit(tech){
@@ -100,8 +101,11 @@
             this.editing.name = tech.name;
         },
         update(){
+            if(!this.editing.name && !this.editing.name.trim()) return;
             axios.put(this.url+this.editing.id,this.editing)
             .then(res =>{
+                this.editing.id='' ;
+                this.editing.name='' ;
                 this.getAll();
             });
         },

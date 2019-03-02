@@ -34,7 +34,41 @@ html, body{
   color: #ff2768;
 }
  
-
+.tag{
+  color: #ff2768;
+}
+.about{
+  padding-top: 70px;
+  p{
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .btn-light {
+    color: #212529;
+    background-color: #fff;
+    border-color: #ff2768;
+    padding: 10px 30px;
+    &:focus{
+      background: #ff2768;
+      border-style: none;
+      box-shadow: none;
+    }
+  }
+}
+.contact{
+.form-group{
+  width: 100%;
+  .form-control{
+     border: 1px solid #ff2768;
+     transition: all 0.7s ease-in-out ;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+}  
+}
 
 .py-4{
   height: 100vh;
@@ -334,7 +368,7 @@ html, body{
     background-repeat: no-repeat;
     background-position: center;
     margin-top: -90px;
-    padding-top: 20%;
+    padding-top: 15%;
     // box-sizing: content-box;
   .content{
     text-align: center;
@@ -344,12 +378,17 @@ html, body{
         font-size: 60px;
         color: #fff;
         font-family: $heading;
+        font-weight: 700;
       }  
     }
+    .call{
+      margin: 30px;
+      color: #ddd;
+    }
     .subt{
-      font-size: 30px;
-      color: #fff;
-      text-transform: uppercase;
+      font-size: 18px;
+      color: #ddd;
+      // text-transform: uppercase;
       span{
         color: #33454f;
         font-weight: bold;
@@ -359,20 +398,37 @@ html, body{
       font-size: 30px;
     }
     .btn-dark {
-      color: #fff;
-      background-color: #343a40;
-      border-color: #343a40;
+      color: #ddd;
+      background-color: #343a4000;
+      border-color: #ddd;
+      font-weight: 700;
       padding: 8px 45px;
       margin: 10px 20px;
       text-transform: uppercase;
       font-size: 12px;
-      transition: all .7;
+      transition: all .7s ease-in-out;
+    
       &:hover{
         background: #fff;
-        color: #33454f;
+        color: #ff2768;
       }
     }
     } 
+    .circle{
+      border-color: #fff;
+      background: transparent;
+      transition: all 0.7s ease-in-out; 
+      i{
+        color: #fff;
+      }
+      &:hover{
+        background: #ff2768;
+        border-color: #ff2768;
+        i{
+          color: #fff;
+        }
+      }
+    }
 }
 #banner{
   height: 220px;
@@ -518,20 +574,20 @@ html, body{
     border: 1px solid #ff2768;
     border-radius: 90%;
     margin: 0 10px;
-    background: #ff2768;
+    background: #fff;
     color: #fff;
     cursor: pointer;
     transition: all 1s ease-in-out;
   @include flexPos(center,center);
   i{
-    color: #fff;
+    color: #ff2768;
     font-size: 12px;
   }
   &:hover{
-    background: #fff;
-    border: 1px solid #fff;
+    background: #ff2768;
+    // border: 1px solid #ff2768;
     i{
-      color: #ff2768;
+      color: #fff;
     }
   }
 
