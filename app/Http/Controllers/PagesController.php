@@ -9,11 +9,12 @@ class PagesController extends Controller
 {
     //
     public function about(){
-        return view('pages.about')   ;     
+        $title = "about";
+         return view('pages.about')->with('title',$title) ;    
     }
 
     public function home(){
-        return view('pages.profile');
+        return view('pages.main');
     }
 
     public function profile(){
@@ -21,7 +22,8 @@ class PagesController extends Controller
     }
 
     public function contact(){
-        return view('pages.contact');   
+        $title = "contant";
+        return view('pages.contact')->with('title',$title);   
     }
 
     // public function portifolio(){

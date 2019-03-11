@@ -89,7 +89,7 @@
         },
         store(){
             if(!this.tech.name && !this.tech.name.trim()) return;
-            axios.post(this.url,this.tech)
+            axios.post('/techs/store',this.tech)
             .then(res =>{
                 this.getAll();
                 this.tech.name ='';

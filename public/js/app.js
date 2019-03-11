@@ -48061,7 +48061,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this2 = this;
 
             if (!this.tech.name && !this.tech.name.trim()) return;
-            axios.post(this.url, this.tech).then(function (res) {
+            axios.post('/techs/store', this.tech).then(function (res) {
                 _this2.getAll();
                 _this2.tech.name = '';
             });
@@ -49277,9 +49277,6 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
 //
 //
 //

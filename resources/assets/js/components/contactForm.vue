@@ -23,9 +23,6 @@
                     <i class="fa fa-send mr-3"></i> Send</button>
             </div>   
         </div>
-        
- 
- 
       </div> 
 </template>
 

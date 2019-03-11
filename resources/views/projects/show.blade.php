@@ -35,7 +35,10 @@
         </div>
         <div class="row">
             @foreach ($pro->screenshots as $img)
-                <img src="/gallery/{{$img->name}}" alt="" srcset="" width="70px">
+            <div class="col-md-4">
+                <img src="/gallery/{{$img->name}}" alt="" srcset="" width="100%">
+            </div>
+                
             @endforeach
         </div>    
         

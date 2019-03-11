@@ -12,7 +12,8 @@
         <title>WEB DEVELOPER</title>
 </head>
 <body>
-    <div id="app" class="dashboard">
+    <div id="app" >
+        <div id="dashboard"> 
         @if (Auth::check())
             <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
                 <div class="container">
@@ -26,7 +27,6 @@
 
                         </ul>
 
-                        <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
                             @guest
@@ -37,8 +37,10 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @else 
+                                <li class="nav-item"><a href="{{route('dashboard')}}" class="nav-link"> Dashboard</a></li>
                                 <li class="nav-item"><a href="/admin/project" class="nav-link"> Projects</a></li>
                                 <li class="nav-item"><a href="/admin/gallery" class="nav-link"> Gallery</a></li>
+                                <li class="nav-item"><a href="/admin/contact" class="nav-link"> Contact</a></li>
                                 <li class="nav-item"><a href="/admin/techs" class="nav-link"> Technoliges</a></li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -64,7 +66,8 @@
                 </div>
             </nav> 
         @endif
-            @yield('content')          
+        @yield('content')
+        </div>          
     </div>
     @yield('script')
 

@@ -33,7 +33,45 @@ html, body{
   margin: 10px;
   color: #ff2768;
 }
- 
+.toggle{
+  @include flexPos(end,center);
+  .togglenav{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    @include flexPos(center,center);
+    flex-direction: column;
+    cursor: pointer;     
+    &::before , &::after , span{
+      content: "";
+      position: relative;
+      width: 16px;
+      height: 2px;
+      background: #fff; //nth($color , 2 );
+      transition: 0.8s top ;
+      transition: 0.3s bottom ease-in-out  ,0.3s top ease-in-out  ;
+    }
+    &::before{
+      top: 7px;
+      width: 23px;     
+    }
+    &::after{
+      bottom: 7px;
+      width: 23px;
+    }
+    &:hover{
+      &::before{
+        top: 10px;
+      }
+      &::after{
+        bottom: 10px;
+      }
+    }
+  }  
+  &:hover{
+    cursor: pointer;
+  }
+}
 .tag{
   color: #ff2768;
 }
@@ -57,18 +95,7 @@ html, body{
     }
   }
 }
-.contact{
-.form-group{
-  width: 100%;
-  .form-control{
-     border: 1px solid #ff2768;
-     transition: all 0.7s ease-in-out ;
-    &:focus{
-      box-shadow: none;
-    }
-  }
-}  
-}
+
 
 .py-4{
   height: 100vh;
@@ -134,7 +161,7 @@ html, body{
 }  
 
 .show-imgs{
-  height: 70px;
+  height: 150px;
   overflow-y: scroll;
   border: 2px #ff2768 solid;
   width: 100%;
@@ -147,7 +174,8 @@ html, body{
   top: 0;
   left: 0;
   z-index: 1;
-  background: nth($color , 2 );//  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('/img/backlit.jpg');
+  background:  linear-gradient(rgba(0, 0, 0, 0.842),rgba(0, 0, 0, 0.801)); //url('/img/abstract.jpg');
+  // #0a0a0aec; //nth($color , 2 );// 
   background-size: cover;
   background-position: left;
   overflow: hidden;
@@ -175,10 +203,10 @@ html, body{
     
   }
   .call{
-    margin: 30px 0;
+    margin: 50px 0;
     .btn-dark{
       padding: 5px 30px;
-      background: nth($color , 2 );
+      background: #fff; //nth($color , 2 );
       margin: 0 20px;
     }
     .btn-dark{
@@ -369,7 +397,6 @@ html, body{
     background-position: center;
     margin-top: -90px;
     padding-top: 15%;
-    // box-sizing: content-box;
   .content{
     text-align: center;
     height: 100%;
@@ -467,8 +494,8 @@ html, body{
   }
 }
 #portfilio{
-  height: 600px;
-  width: 100%;
+  // height: 600px;
+  // width: 100%;
   background: #fff;
   transition: .7 all  ease-in-out ;
 
@@ -612,6 +639,8 @@ html, body{
   border-radius: 3px;
   border: #ff2768 solid 1px;
   transition: all .7s ease-in-out;
+  clear: both;
+  margin-bottom: 5px;
   cursor: pointer;
   &:hover{
     background: #fff;

@@ -3,27 +3,25 @@
         <div class="bars">
             <div class="bar"></div>
         </div>
-    </div>
-    
+    </div>    
     {{-- <button  class="closebtn"><i class="fa fa-close fa-lg"></i></button> --}}
-
     <a class="menuitem " href="/">home</a>
     <a class="menuitem" href="/portifolio">portfolio</a>
     <a class="menuitem" href="/about">about</a>
     <a class="menuitem" href="/contact">contact me</a>
     <div class="call">
-        <a class="btn btn-dark" href="/cv/Ashgan_Mustafa_Resume.docx" target="_blank" > My CV </a>
+        <a class="btn btn-dark" href="/cv/Ashgan_Mustafa_Resume.docx" target="_blank" ><i class="fa fa-file mr-3"></i> My resume </a>
     </div>
-    <div class="row justify-content-center align-items-center  justify-self-end">
+    <div class="row justify-content-center align-items-center">
         <div class="social animated 1 fadeInDown delay-1s">
-            <div class="circle"><a href=""><i class="fa fa-envelope"></i></a></div>  
-            <div class="circle"><a href=""><i class="fa fa-linkedin"></i></a></div>  
-            <div class="circle"><a href=""><i class="fa fa-github"></i></a></div>  
-            <div class="circle"><a href=""><i class="fa fa-facebook"></i></a></div>  
+            <div class="circle"><a href="mailto:ashganwiki@gmail.com"><i class="fa fa-envelope"></i></a></div>  
+            <div class="circle"><a href="https://github.com/ashggan" target="_blank"><i class="fa fa-github"></i></a></div>  
+            <div class="circle"><a href="https://www.linkedin.com/in/ashgan-mustapha-66b56998/" target="_blank"><i class="fa fa-linkedin"></i></a></div>  
+            {{-- <div class="circle"><a href=""><i class="fa fa-facebook"></i></a></div>   --}}
         </div>
     </div>
 </div>
-<div class="container">
+{{-- <div class="container">
     <div class="row menu ">
         <div class="col-md-6  logo" >
             <a href="/"><img src="/logo.png" alt="AM" width="40px"></a>
@@ -34,4 +32,4 @@
             </div>
         </div>   
     </div>     
-</div>
+</div> --}}

@@ -55,7 +55,7 @@
                 <form action=" {{route('gallery.remove',$img->id)}}" method="POST">
                 @csrf
                 <input type="hidden" name="_method" value="DELETE">
-                    <button class="btn " type="submit"><i class="fa fa-remove"></i></button>
+                    <button class="btn btn-dark btn-dark" type="submit"><i class="fa fa-remove"></i></button>
                 </form>
                     
                 </div>

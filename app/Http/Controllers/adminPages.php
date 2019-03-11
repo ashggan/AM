@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 use App\Gallery;
 use App\Projects;
 use App\Technoliges;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class adminPages extends Controller
 {
-
-
+    public function index(){
+        $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+        return $analyticsData; //view('dashboard.index');
+    }
 
     public  function techs(){
         return view('techs.index');
@@ -69,6 +73,9 @@ class adminPages extends Controller
     public function remove($id){
         $pro = Projects::find($id);
         if($pro->delete()) return redirect()->route('project.home') ;
+    }
+    public function contact(){
+        return view('home');
     }
 
 }

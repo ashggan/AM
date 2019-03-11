@@ -10,6 +10,19 @@ use App\Technoliges;
 
 class projectsController extends Controller
 {
+    public function apps(){
+        $pros = Projects::all();
+        foreach ($pros as $pro) {
+            $pro->wraps = $this->unserializing($pro->wraps);
+            $pro->features = $this->unserializing($pro->features);
+            $pro->screenshots = unserialize($pro->screenshots);
+            $pro->screenshots = Gallery::find($pro->screenshots);
+            $pro->techs = unserialize($pro->techs);
+            $pro->techs = Technoliges::find($pro->techs);
+        }
+        $title = "portfilio";
+        return view('pages.apps')->with('pros',$pros)->with('title',$title);
+    }
 
     public function index()
     {

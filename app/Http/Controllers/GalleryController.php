@@ -46,16 +46,13 @@ class GalleryController extends Controller
 
     public function remove(Request $request , $id){
         $img = Gallery::find($id);
-        $path =public_path("gallery")."/".$img->name;
+        $path = "/gallery/".$img->name;
         // return $path;
         if(File::exists($path)){
             file::delete($path);
             if($img->delete() ) return redirect()->route('gallery.home') ; 
             
-        }else{
-           return $path; 
         }
-        
     }
 
 }
