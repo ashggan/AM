@@ -19,5 +19,6 @@ yarn-error.log
 /vendor.zip
 am-ssh
 artisan
+/app/analytics
  
 

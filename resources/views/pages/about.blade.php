@@ -84,8 +84,7 @@
                 <div class="col-md-2 mt-2"><img src="/techs/Express.png" alt="Express" width="100%"></div>
                 <div class="col-md-2 mt-2"><img src="/techs/Bulma.png" alt="Bulma" width="100%"></div>
                 <div class="col-md-2 mt-2"><img src="/techs/Bootstrap.png" alt="Bootstrap"  width="auto" height="90px"></div>
-                <div class="col-md-2 mt-2"><img src="/techs/Bulma.png" alt="Bulma" width="100%"></div>
-                      
+                <div class="col-md-2 mt-2"><img src="/techs/Bulma.png" alt="Bulma" width="100%"></div>      
              </div>
         </div>
     </div>
